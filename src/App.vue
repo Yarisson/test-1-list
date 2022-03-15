@@ -1,20 +1,19 @@
 <template>
   <div>
-    <!-- Html -->
+    <ItemList />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import ItemList from './components/ItemList.vue';
 
 export default defineComponent({
   name: 'App',
-  setup() {
-    // Setup
+  components: {
+    ItemList,
   },
 });
 </script>
 
-<style lang="scss" module>
-// Style
-</style>
+<style lang="scss" module></style>

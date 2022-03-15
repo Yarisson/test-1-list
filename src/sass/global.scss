@@ -1,6 +1,7 @@
 @use 'sass/color';
 
 @import url('//fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import 'color.scss';
 
 *,
 *::before,
@@ -12,6 +13,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  background: $mistyrose;
 }
 
 html {
@@ -20,6 +22,11 @@ html {
   font-size: 87.5%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  border: none;
+  background-color: transparent;
 }
 
 // If you need to style the #app element

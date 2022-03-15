@@ -1,0 +1,91 @@
+@import '_color.scss';
+
+.item-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 840px;
+  padding-top: 80px;
+  margin: 0 auto;
+
+  &__main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  &__item-wrapper {
+    border-bottom: 2px solid $border;
+
+    &:last-of-type {
+      border: none;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  &__button {
+    width: 200px;
+    height: 40px;
+    background-color: transparent;
+    border-radius: 6px;
+  }
+
+  &__button.active {
+    position: relative;
+    background-color: $white;
+
+    &::before {
+      top: 18px;
+      right: 20px;
+      position: absolute;
+      display: block;
+      content: '';
+      border-radius: 50%;
+      width: 4px;
+      height: 4px;
+      background-color: $match;
+    }
+  }
+}
+
+.button-add {
+  color: $plus;
+  display: flex;
+  width: 30px;
+  height: 30px;
+
+  svg {
+    margin: auto;
+  }
+}
+
+.button-add.disabled {
+  color: $disabled;
+}
+
+.input {
+  background-color: $backgroung;
+  border-radius: 4px;
+}
+
+.button-clear {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  color: $cancel;
+
+  svg {
+    margin: auto;
+  }
+}
